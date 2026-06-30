@@ -20,7 +20,7 @@ npm install
 npm start
 
 📊 Demo
-![Dashboard Screenshot](Screenshot.png)
+![Dashboard Screenshot](./screenshot.png)
 
 
 🛠 Tech Stack
