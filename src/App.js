@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import SeverityChart from './SeverityChart'; // <-- new chart component
+import SeverityChart from './SeverityChart';
 
 function App() {
   const [alerts, setAlerts] = useState([]);
@@ -16,7 +16,7 @@ function App() {
       }
     };
     fetchAlerts();
-    const interval = setInterval(fetchAlerts, 5000); // refresh every 5s
+    const interval = setInterval(fetchAlerts, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -29,7 +29,14 @@ function App() {
   };
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div style={{ padding: '20px', textAlign: 'center' }}>
+      {/* Custom image/logo */}
+      <img 
+         
+       
+        style={{ width: '120px', marginBottom: '10px' }} 
+      />
+
       <h1>Supply Chain Defense Dashboard</h1>
 
       {/* Filter dropdown */}
@@ -44,12 +51,12 @@ function App() {
       </div>
 
       {/* Chart visualization */}
-      <div style={{ marginBottom: '30px', width: '600px' }}>
+      <div style={{ marginBottom: '30px', width: '600px', margin: '0 auto' }}>
         <SeverityChart alerts={alerts} />
       </div>
 
       {/* Alerts table */}
-      <table border="1" cellPadding="10">
+      <table border="1" cellPadding="10" style={{ margin: '0 auto' }}>
         <thead>
           <tr>
             <th>Timestamp</th>
